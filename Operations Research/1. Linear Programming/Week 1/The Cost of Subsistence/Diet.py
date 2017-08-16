@@ -1,3 +1,7 @@
+from gurobipy import *
+
+# provided data
+
 Food = ['Broccoli','Multigrain Bread','Carrots','Potato','Milk','Beef Mince',
      'Banana','Pasta','Pasta Sauce','Scotch Fillet','Chicken Breast',
      'White Rice','Peas','Cucumber','Cauliflower','Peach','Apple',
@@ -40,3 +44,44 @@ DMAX = [GRB.INFINITY,GRB.INFINITY,50,1,1000,2500,GRB.INFINITY,45,2300,16300,5000
 F = range(len(Food))
 N = range(len(Nutrients))
 
+# looks straightforward
+
+m = Model()
+
+# Variables
+X = {}
+for f in F:
+  X[f] = m.addVar()
+
+# Objective
+m.setObjective(quicksum(C[f]*X[f] for f in F))
+
+# Constraints
+Y = {}
+
+print "N", len(Nutrients)
+
+Y = [[0 for i in range(2)] for n in N] # 2d array initialisation
+
+for n in N:
+  Y[n][0] = m.addConstr(quicksum(X[f]*NV[f][n] for f in F) <= DMAX[n])
+  Y[n][1] = m.addConstr(quicksum(X[f]*NV[f][n] for f in F) >= DMIN[n])
+
+m.optimize()
+
+# print solved values
+
+for f in F:
+  print Food[f], "=", X[f].x
+
+
+"""
+Solution:
+
+$4.60
+
+1.926 portions of milk, 3.016 portions of pasta, 9.533 portions of white rice, 0.662 portions of Cauliflower
+
+Goddam is this applicable. I should punch this in for a diet plan for me. Fill out the macronutrients thing and then set goals (protein would be a bit higher and same for calories - this is ridiculously awesome though)
+
+"""

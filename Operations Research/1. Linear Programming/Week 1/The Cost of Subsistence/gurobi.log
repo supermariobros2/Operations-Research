@@ -1,0 +1,71 @@
+
+Gurobi 7.5.1 (win64, Python) logging started 08/16/17 19:22:43
+
+
+Gurobi 7.5.1 (win64, Python) logging started 08/16/17 19:28:01
+
+
+Gurobi 7.5.1 (win64, Python) logging started 08/16/17 19:28:16
+
+
+Gurobi 7.5.1 (win64, Python) logging started 08/16/17 19:28:34
+
+
+Gurobi 7.5.1 (win64, Python) logging started 08/16/17 19:28:40
+
+
+Gurobi 7.5.1 (win64, Python) logging started 08/16/17 19:29:34
+
+
+Gurobi 7.5.1 (win64, Python) logging started 08/16/17 19:29:43
+
+
+Gurobi 7.5.1 (win64, Python) logging started 08/16/17 19:30:05
+
+
+Gurobi 7.5.1 (win64, Python) logging started 08/16/17 19:30:32
+
+
+Gurobi 7.5.1 (win64, Python) logging started 08/16/17 19:31:21
+
+
+Gurobi 7.5.1 (win64, Python) logging started 08/16/17 19:31:48
+
+
+Gurobi 7.5.1 (win64, Python) logging started 08/16/17 19:32:40
+
+Optimize a model with 22 rows, 20 columns and 414 nonzeros
+Coefficient statistics:
+  Matrix range     [1e-03, 4e+04]
+  Objective range  [1e-01, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [4e-01, 6e+04]
+Presolve removed 11 rows and 0 columns
+Presolve time: 0.00s
+Presolved: 11 rows, 28 columns, 215 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.041563e+03   0.000000e+00      0s
+       8    4.6032563e+00   0.000000e+00   0.000000e+00      0s
+
+Solved in 8 iterations and 0.00 seconds
+Optimal objective  4.603256271e+00
+
+Gurobi 7.5.1 (win64, Python) logging started 08/16/17 19:37:46
+
+Optimize a model with 22 rows, 20 columns and 414 nonzeros
+Coefficient statistics:
+  Matrix range     [1e-03, 4e+04]
+  Objective range  [1e-01, 3e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [4e-01, 6e+04]
+Presolve removed 11 rows and 0 columns
+Presolve time: 0.00s
+Presolved: 11 rows, 28 columns, 215 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.041563e+03   0.000000e+00      0s
+       8    4.6032563e+00   0.000000e+00   0.000000e+00      0s
+
+Solved in 8 iterations and 0.00 seconds
+Optimal objective  4.603256271e+00
